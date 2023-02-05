@@ -43,7 +43,7 @@ export default function Home() {
     <div className='pt-20'>
       <div className='flex flex-col justify-center items-center'>
         <h1 className='text-3xl sm:text-5xl mb-6 font-bold text-center'>
-          Lens Starter App 🌿
+          Lens Social App 🌿
         </h1>
         {profiles.map((profile) => (
           <div
