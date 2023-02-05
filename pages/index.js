@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <div className='pt-20'>
       <div className='flex flex-col justify-center items-center'>
-        <h1 className='text-5xl mb-6 font-bold'>Hello Lens 🌿</h1>
+        <h1 className='text-5xl mb-6 font-bold'>Lens Starter App 🌿</h1>
         {profiles.map((profile) => (
           <div
             key={profile.id}
