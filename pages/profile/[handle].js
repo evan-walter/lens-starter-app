@@ -58,16 +58,20 @@ export default function Profile() {
   return (
     <div className='pt-20'>
       <div className='flex flex-col justify-center items-center'>
-        <img className='w-64 rounded-full' src={profile.avatarUrl} />
+        <img
+          className='w-64 rounded-full'
+          src={profile.avatarUrl}
+          alt={profile.handle}
+        />
         <p className='text-4xl mt-8 mb-8'>{profile.handle}</p>
-        <p className='text-center text-xl font-bold mt-2 mb-2 w-1/2'>
-          {profile.bio}
-        </p>
-        {publications.map((pub) => (
-          <div key={pub.id} className='shadow p-10 rounded mb-8 w-2/3'>
-            <p>{pub.metadata.content}</p>
-          </div>
-        ))}
+        <p className='text-center text-xl font-bold mt-2 mb-2'>{profile.bio}</p>
+        <div className='flex flex-col gap-y-8'>
+          {publications.map((pub) => (
+            <p key={pub.id} className='flex shadow p-4 rounded sm:p-10'>
+              {pub.metadata.content}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   )
